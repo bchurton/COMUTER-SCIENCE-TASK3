@@ -1,0 +1,18 @@
+
+<h1>Can you watch this film?</h1>
+<h3 id="yesorno">Enter age below!</h3>
+<br>
+<input type="number" max="100" oninput="checkAge()" id="age">
+
+<script>
+function checkAge() {
+    const age = document.getElementById("age").value
+    if (Number(age) < 15) {
+        document.getElementById("yesorno").innerText = "Sorry, you cannot watch this film"
+    }
+    else {
+        document.getElementById("yesorno").innerText = "You are old enough to watch this film!"
+    }
+
+}
+</script>
